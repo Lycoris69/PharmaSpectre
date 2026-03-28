@@ -75,7 +75,7 @@ FontChar font[] = {
 };
 
 const FontChar* getChar(char c){
-    for(int i=0; i < sizeof(font)/sizeof(FontChar); i++)
+    for(size_t i=0; i < sizeof(font)/sizeof(FontChar); i++)
         if(font[i].letter == c) return &font[i];
     return nullptr;
 }
