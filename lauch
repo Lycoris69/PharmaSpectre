@@ -1,0 +1,1 @@
+ffmpeg -re -i BadBunnyPiToRRO.mp3 -f s16le -ac 1 -ar 22050 - | ./specter
