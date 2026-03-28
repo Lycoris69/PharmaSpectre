@@ -8,22 +8,22 @@ LIB = Simulator/libsim.a
 
 all: challenge heart matrix_rain date annonce specter
 
-challenge: $(SRC) $(LIB) Simulator/wiringPi.h
+challenge: $(SRC) $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) $(SRC) $(LIB) -o challenge
 
-heart: Lib_Croix/heart.cpp Lib_Croix/CroixPharma.cpp $(LIB) Simulator/wiringPi.h
+heart: Lib_Croix/heart.cpp Lib_Croix/CroixPharma.cpp $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) Lib_Croix/heart.cpp Lib_Croix/CroixPharma.cpp $(LIB) -o heart
 
-matrix_rain: Lib_Croix/matrix_rain.cpp Lib_Croix/CroixPharma.cpp $(LIB) Simulator/wiringPi.h
+matrix_rain: Lib_Croix/matrix_rain.cpp Lib_Croix/CroixPharma.cpp $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) Lib_Croix/matrix_rain.cpp Lib_Croix/CroixPharma.cpp $(LIB) -o matrix_rain
 
-date: Lib_Croix/date.cpp Lib_Croix/CroixPharma.cpp $(LIB) Simulator/wiringPi.h
+date: Lib_Croix/date.cpp Lib_Croix/CroixPharma.cpp $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) Lib_Croix/date.cpp Lib_Croix/CroixPharma.cpp $(LIB) -o date
 
-annonce: Lib_Croix/annonce.cpp Lib_Croix/CroixPharma.cpp $(LIB) Simulator/wiringPi.h
+annonce: Lib_Croix/annonce.cpp Lib_Croix/CroixPharma.cpp $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) Lib_Croix/annonce.cpp Lib_Croix/CroixPharma.cpp $(LIB) -o annonce
 
-specter: Lib_Croix/specter.cpp Lib_Croix/CroixPharma.cpp $(LIB) Simulator/wiringPi.h
+specter: Lib_Croix/specter.cpp Lib_Croix/CroixPharma.cpp $(LIB) WiringPi/wiringPi/wiringPi.h
 	$(CXX) $(CXXFLAGS) Lib_Croix/specter.cpp Lib_Croix/CroixPharma.cpp $(LIB) -o specter
 
 clean:
